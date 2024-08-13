@@ -20,6 +20,13 @@ const getCurrentWeatherByCoordinates = async (lat, lon) => {
     return json;
 }
 
+const getForecastWeatherByName = async (city) => {
+    const url = `${BASE_URL}/forecast?q=${city}&appid=${API_KEY}&units=metric`
+    const response = await fetch(url)
+    const json = await response.json();
+    return json;
+}
+
 const renderCurrentWeather = data => {
     const weatherJsx = `
     <h1 class="font-extrabold text-indigo-900 text-[2rem] mb-5">
@@ -45,6 +52,9 @@ const searchHandler = async () => {
     }
     const currentData = await getCurrentWeatherByName(cityName)
     renderCurrentWeather(currentData);
+    const forecastData = await getForecastWeatherByName(cityName)
+    console.log(forecastData);
+    
 }
 
 const positionCallback = async position => {
