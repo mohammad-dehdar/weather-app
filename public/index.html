@@ -14,6 +14,17 @@
     </div>
     <div id="weather" class="flex flex-col items-center justify-center bg-white w-[500px] min-h-52 m-auto mb-14 relative bottom-20 p-8 rounded-xl shadow-indigo-100 shadow-lg"></div>
     <div id="forecast" class="flex justify-between"></div>
+
+    <div id="modal" class="bg-gray-700 opacity-[0.7] absolute hidden top-0 left-0 w-full h-full justify-center items-center">
+        <div class="bg-white w-[500px] rounded-lg p-10">
+            <div>
+                <span id="modal-button" class="bg-red-700 text-white font-extrabold text-2xl cursor-pointer transition-all ease-in px-2.5 py-1 rounded-lg ">X</span>
+            </div>
+            <div>
+                <p class="mt-10 text-red-700 font-bold">text</p>
+            </div>
+        </div>
+    </div>
     <script type="module" src="./js/app.js"></script>
 </body>
 </html>
