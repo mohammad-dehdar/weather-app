@@ -93,6 +93,14 @@ const locationHandler = () => {
 
 }
 
+const initHandler = async () => {
+    const currentData = await getWeatherData("current", "tehran")
+    renderCurrentWeather(currentData);
+    const forecastData = await getWeatherData("forecast", "tehran")
+    renderForecastWeather(forecastData)
+}
+
 loacationIcon.addEventListener('click', locationHandler)
 searchButton.addEventListener("click", searchHandler)
 modalButton.addEventListener("click", removeModal) 
+document.addEventListener("DOMContentLoaded", initHandler)

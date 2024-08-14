@@ -12,7 +12,9 @@
         <input type="text" name="" id="" placeholder="enter city name" class="w-80 h-9  p-2.5 text-indigo-900 rounded-l-xl focus:outline-none">
         <button class="bg-gradient-to-r from-amber-200 to-yellow-500 h-9 p-2.5 rounded-r-xl  text-xs  cursor-pointer transition-all ease-in hover:text-blue-700">search</button>
     </div>
-    <div id="weather" class="flex flex-col items-center justify-center bg-white w-[500px] min-h-52 m-auto mb-14 relative bottom-20 p-8 rounded-xl shadow-indigo-100 shadow-lg"></div>
+    <div id="weather" class="flex flex-col items-center justify-center bg-white w-[500px] min-h-52 m-auto mb-14 relative bottom-20 p-8 rounded-xl shadow-indigo-100 shadow-lg">
+        <span id="loader" class="w-28 h-28 border-[7px] border-indigo-900 border-t-transparent border-b-transparent rounded-full inline-block animate-rotate"></span>
+    </div>
     <div id="forecast" class="flex justify-between"></div>
 
     <div id="modal" class="bg-gray-700 opacity-[0.7] absolute hidden top-0 left-0 w-full h-full justify-center items-center">
