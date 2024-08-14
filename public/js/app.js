@@ -22,7 +22,7 @@ const renderCurrentWeather = data => {
         <span class="mx-2 text-center text-gray-500">${data.weather[0].main}</span>
         <p>${Math.round(data.main.temp)} °C</p>
     </div>
-    <div class="w-full flex justify-evenly items-center">
+    <div class="w-full flex justify-evenly items-center max-sm:flex-col gap-2">
         <p> Humidity: <span class="text-indigo-400 ml-1.5">${data.main.humidity} %</span></p>
         <p> wind speed: <span class="text-indigo-400 ml-1.5">${data.wind.speed} %</span></p>
     </div>

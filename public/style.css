@@ -706,6 +706,10 @@ video {
   justify-content: space-evenly;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
@@ -950,4 +954,73 @@ video {
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+@media not all and (min-width: 640px) {
+  .max-sm\:m-auto {
+    margin: auto;
+  }
+
+  .max-sm\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .max-sm\:block {
+    display: block;
+  }
+
+  .max-sm\:flex {
+    display: flex;
+  }
+
+  .max-sm\:w-\[95\%\] {
+    width: 95%;
+  }
+
+  .max-sm\:w-48 {
+    width: 12rem;
+  }
+
+  .max-sm\:flex-col {
+    flex-direction: column;
+  }
+
+  .max-sm\:flex-wrap {
+    flex-wrap: wrap;
+  }
+
+  .max-sm\:justify-center {
+    justify-content: center;
+  }
+
+  .max-sm\:gap-2 {
+    gap: 0.5rem;
+  }
+
+  .max-sm\:gap-y-3 {
+    row-gap: 0.75rem;
+  }
+
+  .max-sm\:rounded-xl {
+    border-radius: 0.75rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .max-\[320px\]\:w-7 {
+    width: 1.75rem;
+  }
+
+  .max-\[320px\]\:w-72 {
+    width: 18rem;
+  }
+
+  .max-\[320px\]\:w-5 {
+    width: 1.25rem;
+  }
+
+  .max-\[320px\]\:w-52 {
+    width: 13rem;
+  }
 }
