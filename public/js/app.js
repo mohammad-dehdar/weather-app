@@ -1,10 +1,6 @@
+import { getWeekDay } from "./customDate.js";
 import getWeatherData from "./httpReq.js";
 import { removeModal, showModal } from "./modal.js";
-
-const BASE_URL = "https://api.openweathermap.org/data/2.5"
-const API_KEY = "7ecbcfc5912359e54c3c1271a7f8ff42"
-const DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-
 
 const searchInput = document.querySelector("input");
 const searchButton = document.querySelector("button");
@@ -12,8 +8,6 @@ const weatherContainer = document.getElementById("weather");
 const forecastContainer = document.getElementById("forecast");
 const loacationIcon = document.getElementById("location");
 const modalButton = document.getElementById("modal-button")
-
-
 
 const renderCurrentWeather = data => {
     if (!data) {
@@ -34,10 +28,6 @@ const renderCurrentWeather = data => {
     </div>
     `
     weatherContainer.innerHTML = weatherJsx;
-}
-
-const getWeekDay = date => {
-    return DAYS[new Date(date * 1000).getDay()];
 }
 
 const renderForecastWeather = (data) => {
